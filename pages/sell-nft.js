@@ -129,7 +129,7 @@ export default function Home() {
                 title="Sell your NFT!"
                 id="Main Form"
             />
-            <div>Withdraw {proceeds} proceeds</div>
+            <div>Withdraw {ethers.utils.formatEther(proceeds.toString()).toString()} proceeds</div>
             {proceeds != "0" ? (
                 <Button
                     onClick={() => {
@@ -141,7 +141,7 @@ export default function Home() {
                                 params: {},
                             },
                             onError: (error) => console.log(error),
-                            onSuccess: () => handleWithdrawSuccess,
+                            onSuccess: () => handleWithdrawSuccess(),
                         })
                     }}
                     text="Withdraw"
