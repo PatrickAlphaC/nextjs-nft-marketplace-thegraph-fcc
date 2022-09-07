@@ -36,7 +36,7 @@ export default function Home() {
 
         await runContractFunction({
             params: approveOptions,
-            onSuccess: () => handleApproveSuccess(nftAddress, tokenId, price),
+            onSuccess: (tx) => handleApproveSuccess(tx, nftAddress, tokenId, price),
             onError: (error) => {
                 console.log(error)
             },
@@ -45,6 +45,7 @@ export default function Home() {
 
     async function handleApproveSuccess(nftAddress, tokenId, price) {
         console.log("Ok! Now time to list")
+        await tx.wait()
         const listOptions = {
             abi: nftMarketplaceAbi,
             contractAddress: marketplaceAddress,
