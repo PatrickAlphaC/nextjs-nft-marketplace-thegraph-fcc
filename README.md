@@ -1,6 +1,6 @@
-
-
 # NextJS NFT Marketplace with TheGraph
+
+*This repo has been updated for Goerli over Rinkeby.*
 
 ## 1. Git clone the contracts repo
 
