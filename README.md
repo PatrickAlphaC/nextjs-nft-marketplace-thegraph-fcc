@@ -12,12 +12,12 @@ cd hardhat-nextjs-nft-marketplace-fcc
 yarn
 ```
 
-## 2. Deploy to rinkeby 
+## 2. Deploy to goerli 
 
-After installing dependencies, deploy your contracts to rinkeby:
+After installing dependencies, deploy your contracts to goerli:
 
 ```
-yarn hardhat deploy --network rinkeby
+yarn hardhat deploy --network goerli
 ```
 
 ## 3. Deploy your subgraph
@@ -37,7 +37,7 @@ Then, make a `.env` file and place your temporary query URL into it as `NEXT_PUB
 ## 4. Start your UI
 
 Make sure that:
-- In your `networkMapping.json` you have an entry for `NftMarketplace` on the rinkeby network. 
+- In your `networkMapping.json` you have an entry for `NftMarketplace` on the goerli network. 
 - You have a `NEXT_PUBLIC_SUBGRAPH_URL` in your `.env` file. 
 
 ```
