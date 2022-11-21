@@ -43,7 +43,7 @@ export default function Home() {
         })
     }
 
-    async function handleApproveSuccess(nftAddress, tokenId, price) {
+    async function handleApproveSuccess(tx, nftAddress, tokenId, price) {
         console.log("Ok! Now time to list")
         await tx.wait()
         const listOptions = {
