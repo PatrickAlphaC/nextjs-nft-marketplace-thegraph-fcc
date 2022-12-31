@@ -21,9 +21,8 @@ export default function Home() {
                         <div>Loading...</div>
                     ) : (
                         listedNfts.activeItems.map((nft) => {
-                            console.log(nft)
                             const { price, nftAddress, tokenId, seller } = nft
-                            return (
+                            return marketplaceAddress ? (
                                 <NFTBox
                                     price={price}
                                     nftAddress={nftAddress}
@@ -32,6 +31,8 @@ export default function Home() {
                                     seller={seller}
                                     key={`${nftAddress}${tokenId}`}
                                 />
+                            ) : (
+                                <div></div>
                             )
                         })
                     )
