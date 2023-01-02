@@ -32,7 +32,7 @@ export default function Home() {
                                     key={`${nftAddress}${tokenId}`}
                                 />
                             ) : (
-                                <div></div>
+                                <div>Network error, please switch to a supported network. </div>
                             )
                         })
                     )
