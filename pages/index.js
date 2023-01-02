@@ -6,9 +6,9 @@ import GET_ACTIVE_ITEMS from "../constants/subgraphQueries"
 import { useQuery } from "@apollo/client"
 
 export default function Home() {
-    const { isWeb3Enabled, chainId } = useMoralis()
-    const chainString = chainId ? parseInt(chainId).toString() : "31337"
-    const marketplaceAddress = networkMapping[chainString].NftMarketplace[0]
+    const { chainId, isWeb3Enabled } = useMoralis()
+    const chainString = chainId ? parseInt(chainId).toString() : null
+    const marketplaceAddress = chainId ? networkMapping[chainString].NftMarketplace[0] : null
 
     const { loading, error, data: listedNfts } = useQuery(GET_ACTIVE_ITEMS)
 
@@ -16,14 +16,13 @@ export default function Home() {
         <div className="container mx-auto">
             <h1 className="py-4 px-4 font-bold text-2xl">Recently Listed</h1>
             <div className="flex flex-wrap">
-                {isWeb3Enabled ? (
+                {isWeb3Enabled && chainId ? (
                     loading || !listedNfts ? (
                         <div>Loading...</div>
                     ) : (
                         listedNfts.activeItems.map((nft) => {
-                            console.log(nft)
                             const { price, nftAddress, tokenId, seller } = nft
-                            return (
+                            return marketplaceAddress ? (
                                 <NFTBox
                                     price={price}
                                     nftAddress={nftAddress}
@@ -32,6 +31,8 @@ export default function Home() {
                                     seller={seller}
                                     key={`${nftAddress}${tokenId}`}
                                 />
+                            ) : (
+                                <div>Network error, please switch to a supported network. </div>
                             )
                         })
                     )
