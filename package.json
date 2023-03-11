@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "export": "next export",
     "moralis:sync": "moralis-admin-cli connect-local-devchain --chain hardhat --moralisSubdomain wciosc5v5doe.usemoralis.com --frpcPath ./frp/frpc",
     "moralis:cloud": "moralis-admin-cli watch-cloud-folder --moralisSubdomain wciosc5v5doe.usemoralis.com --autoSave 1 --moralisCloudfolder ./cloudFunctions"
   },
