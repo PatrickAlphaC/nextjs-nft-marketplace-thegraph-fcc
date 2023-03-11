@@ -1,6 +1,6 @@
 # NextJS NFT Marketplace with TheGraph
 
-*This repo has been updated for Goerli over Rinkeby.*
+*This repo has been updated for Sepolia over Goerli.*
 
 ## 1. Git clone the contracts repo
 
@@ -12,12 +12,12 @@ cd hardhat-nextjs-nft-marketplace-fcc
 yarn
 ```
 
-## 2. Deploy to goerli 
+## 2. Deploy to sepolia 
 
-After installing dependencies, deploy your contracts to goerli:
+After installing dependencies, deploy your contracts to sepolia:
 
 ```
-yarn hardhat deploy --network goerli
+yarn hardhat deploy --network sepolia
 ```
 
 ## 3. Deploy your subgraph
@@ -37,7 +37,7 @@ Then, make a `.env` file and place your temporary query URL into it as `NEXT_PUB
 ## 4. Start your UI
 
 Make sure that:
-- In your `networkMapping.json` you have an entry for `NftMarketplace` on the goerli network. 
+- In your `networkMapping.json` you have an entry for `NftMarketplace` on the sepolia network. 
 - You have a `NEXT_PUBLIC_SUBGRAPH_URL` in your `.env` file. 
 
 ```
