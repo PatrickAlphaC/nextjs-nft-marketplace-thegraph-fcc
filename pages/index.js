@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css"
-import { useMoralisQuery, useMoralis } from "react-moralis"
+import { useMoralis } from "react-moralis"
 import NFTBox from "../components/NFTBox"
 import networkMapping from "../constants/networkMapping.json"
 import GET_ACTIVE_ITEMS from "../constants/subgraphQueries"
