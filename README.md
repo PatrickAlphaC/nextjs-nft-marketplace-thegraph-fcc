@@ -1,3 +1,8 @@
+> !Update!
+> As of May 31, 2024. We are no longer supporting this repo/tutorial.
+> Please visit [Cyfrin Updraft](https://updraft.cyfrin.io/) and stay tuned for a new full-stack course slated for 2024! 
+
+
 # NextJS NFT Marketplace with TheGraph
 
 *This repo has been updated for Sepolia over Goerli.*
